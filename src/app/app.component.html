@@ -1,22 +1,210 @@
-<div>
-  <h1>
-    {{ title }}
-  </h1>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<div id="backgroundimage">
+    <img src="./assets/background-image.jpg" width="100%">
 </div>
 
-<div style="width: 90%; float: center">
+<div style="width:100%; border-bottom-color: white; border-bottom-width:1px;">
+
+  <div id="homePageTitle" style="width:40%; margin-right: 20%; display:inline-block;">
+    <h1> {{ title }} </h1>
+  </div>
+
+  <div class="topnav">
+
+    <div style="display:inline-block">
+      <button class="nav-button">British Pound</button>
+    </div>
+
+    <div style="display:inline-block">
+        <button class="nav-button">English</button>
+    </div>
+
+    <div style="display:inline-block">
+        <button class="nav-button">Manage Booking</button>
+    </div>
+
+    <div style="display:inline-block">
+        <button class="nav-button">Sign In</button>
+    </div>
+  </div>
+
+</div>
+
+<div style="width: 100%;" class="popular-locations">
+  <button id="popular-locations" style="float:right">POPULAR LOCATIONS</button>
+</div>
+
+<div id="sub"> 
+  <div class="content">
+    <div id="title">
+      <h1>Car Hire - Search, Compare & Save</h1>
+    </div>
+    <div id="subTitle">
+        <p>Compare 900 companies at over 60,000 locations. Best price guaranteed</p>
+      </div>
+  </div>
+</div>
+
+<div style="width: 90%; margin-left: 5%;">
+
   <fieldset id="location-fieldset">
-    <h2>
-      Let's find your ideal car
-    </h2>
+
+    <h2> Let's find your ideal car </h2>
+
     <div>
             <label>Pick-up Location</label>
             <input type="text" id="ftsAutocomplete" value="" placeholder="city, airport, station, region, district…" role="textbox">
     </div>
   </fieldset>
 
-  <fieldset id="btn-fieldset">
-    <input type="submit" value="Search" id="formsubmit">
+  <fieldset>
+      <input type="checkbox">
+      <label>Drop off car at different location?</label>
+  </fieldset>
+
+<fieldset>
+  <div>
+    <label style= " display: inline-block; width: 40%" id="pickUpDateLabel">Pick-Up Date:</label>
+    <label style= " display: inline-block; margin-left: 20%" id="dropOffDateLabel">Drop-off Date:</label> 
+  </div>
+</fieldset>
+
+<div>
+  <fieldset>
+      <mat-form-field style="width:40%" id="pickUpDatePicker">
+          <input matInput [matDatepicker]="picker" placeholder="choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field style="width:40%" id="dropOffDatePicker">
+          <input matInput [matDatepicker]="picker2" placeholder="choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
   </fieldset>
 </div>
+
+<fieldset>
+  <div>
+    <select name="pickUpHour" style="width:20%">
+        <option value="00">00</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+    </select>
+
+    <select name= "pickUpMins" style="width:20%; margin-right: 20%;">
+        <option value="00">00</option>
+        <option value="15">15</option>
+        <option value="30">30</option>
+        <option value="45">45</option>
+    </select>
+
+    <select name="dropOffHour" style="width: 20%">
+        <option value="00">00</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+    </select>
+
+    <select name= "DropOffMins" style="width:20%;">
+        <option value="00">00</option>
+        <option value="15">15</option>
+        <option value="30">30</option>
+        <option value="45">45</option>
+    </select>
+  </div>
+</fieldset>
+
+<fieldset>
+    <input type="checkbox">
+    <label>Driver aged between 30-65?</label>
+</fieldset>
+
+<fieldset>
+
+  <div class="purposeOfRental">
+    <span>Purpose of rental&nbsp;<em>(optional)</em></span>
+
+    <input type="radio" name="blah" value="Business">Business
+
+    <input type="radio" name="blah" value="Leisure">Lesiure
+  </div>    
+
+</fieldset>
+
+<fieldset id="btn-fieldset">
+    <input type="submit" value="Search" id="formsubmit">
+
+    <ul id="why-book-bullets-points">
+        <li>No credit card fees</li>
+        <li>No amendment fees</li>
+        <li>24/7 phone support</li>
+    </ul>
+</fieldset>
+
+</div>
+
+<div class="car-hire-providers">
+  <h2 id="car-hire-providers-message">
+      Rentalcars.com connects you to the biggest brands in car hire.
+  </h2>
+  <img class="car-hire-company" src="/assets/AvisImage.png">
+  <img class="car-hire-company" src="/assets/HertzImage.png">
+  <img height="50px" src="/assets/BudgetImage.jpg">
+  <img class="car-hire-company" src="/assets/EuropcarImage.png">
+  <img class="car-hire-company" src="/assets/ThriftyImage.jpg">
+  <img class="car-hire-company" src="/assets/AlamoImage.png">
+  <img class="car-hire-company" src="/assets/DollarImage.png">
+  <img class="car-hire-company" src="/assets/EnterpriseImage.png">
+  <img class="car-hire-company" src="/assets/SixtImage.jpg">
+</div>
+
+</body>
 <router-outlet></router-outlet>
