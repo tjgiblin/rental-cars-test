@@ -193,7 +193,8 @@ h1 {
 
   div.car-hire-providers
   {
-      margin-left: 5%;
+      background-color: rgba(255,255,255,0.7);
+      margin-left: 2%;
   }
 
   #car-hire-providers-message
