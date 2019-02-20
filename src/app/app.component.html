@@ -88,13 +88,15 @@
 <div>
   <fieldset>
       <mat-form-field style="width:40%" id="pickUpDatePicker">
-          <input matInput [matDatepicker]="picker" placeholder="choose a date" [(ngModel)]="pickUpDate">
+          <input matInput [ngModel]="pickUpDate | date:'dd-MM-yyyy'">  
+          <input matInput [hidden]='true' [matDatepicker]="picker" [(ngModel)]="pickUpDate">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
 
       <mat-form-field style="width:40%" id="dropOffDatePicker">
-          <input matInput [matDatepicker]="picker2" placeholder="choose a date" [(ngModel)]="dropOffDate">
+          <input matInput [ngModel]="dropOffDate | date:'dd-MM-yyyy'">  
+          <input matInput [hidden]='true' [matDatepicker]="picker2" [(ngModel)]="dropOffDate">
           <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
           <mat-datepicker #picker2></mat-datepicker>
       </mat-form-field>
@@ -178,8 +180,9 @@
     <input type="checkbox" [(ngModel)]="isYoungDriver">
     <label>Driver aged between 30-65?</label>
 
-    <div *ngIf="!isYoungDriver">Driver's age
-      <input type="text" style="width:25px; margin-top: 10px;" [(ngModel)]="youngDriverAge">
+    <div *ngIf="!isYoungDriver">
+      <label style= "margin-left: 2%">Driver's age </label>
+      <input type="text" style="width:26px; margin-top: 10px; margin-left: 5px; padding: 5px" [(ngModel)]="youngDriverAge">
     </div>
   </div>
 </fieldset>
@@ -190,7 +193,6 @@
     <span>Purpose of rental&nbsp;<em>(optional)</em></span>
 
     <input type="radio" name="Business" value="Business" [(ngModel)]="purposeOfRental">Business
-
     <input type="radio" name="Leisure" value="Leisure" [(ngModel)]="purposeOfRental">Lesiure
   </div>    
 
