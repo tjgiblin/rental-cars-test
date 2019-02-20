@@ -67,8 +67,15 @@
   </fieldset>
 
   <fieldset>
-      <input type="checkbox">
+      <input type="checkbox" [(ngModel)]="differentDropOffLocation">
       <label>Drop off car at different location?</label>
+  </fieldset>
+
+  <fieldset *ngIf="differentDropOffLocation">
+      <div>
+          <label>Drop-off Location</label>
+          <input type="text" id="ftsAutocomplete" value="" placeholder="city, airport, station, region, district…" role="textbox">
+  </div>
   </fieldset>
 
 <fieldset>
