@@ -4,6 +4,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="//code.angularjs.org/1.7.7/angular.min.js"></script>
   <script src="//code.angularjs.org/1.7.7/angular-animate.js"></script>
+
 </head>
 
 <body>
@@ -178,7 +179,13 @@
 <fieldset>
   <div ng-app>
     <input type="checkbox" [(ngModel)]="isYoungDriver">
-    <label>Driver aged between 30-65?</label>
+    <label>Driver aged between 30-65? </label>
+    
+        <button type="button" class="btn btn-outline-secondary popover"
+        ngbPopover="Some companies charge more for younger or older drivers. Before you choose a car, we’ll show you exactly who charges what."
+        triggers="mouseenter:mouseleave"
+        popoverTitle="No Hidden Fees">
+          </button>
 
     <div *ngIf="!isYoungDriver">
       <label style= "margin-left: 2%">Driver's age </label>
@@ -190,7 +197,12 @@
 <fieldset>
 
   <div class="purposeOfRental">
-    <span>Purpose of rental&nbsp;<em>(optional)</em></span>
+    <span>Purpose of rental&nbsp;<em>(optional) </em></span>
+
+    <button type="button" class="btn btn-outline-secondary popover"
+    ngbPopover="We are always looking for ways to improve our service and bring you the best deals by better understanding your needs."
+    triggers="mouseenter:mouseleave">
+      </button>
 
     <input type="radio" name="Business" value="Business" [(ngModel)]="purposeOfRental">Business
     <input type="radio" name="Leisure" value="Leisure" [(ngModel)]="purposeOfRental">Lesiure
