@@ -165,14 +165,14 @@
     </select>
   </div>
 </fieldset>
-
+ 
 <fieldset>
   <div ng-app>
-    <input type="checkbox" ng-model="young-driver">
+    <input type="checkbox" [(ngModel)]="isYoungDriver">
     <label>Driver aged between 30-65?</label>
 
-    <div ng-show="young-driver">Driver's age
-      <input>
+    <div *ngIf="!isYoungDriver">Driver's age
+      <input type="text" style="width:25px; margin-top: 10px;">
     </div>
   </div>
 </fieldset>

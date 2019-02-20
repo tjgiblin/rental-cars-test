@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  constructor(){
+    this.isYoungDriver = true;
+  }
+
   title = 'Rentalcars.com';
+
+  isYoungDriver: boolean;
 }
