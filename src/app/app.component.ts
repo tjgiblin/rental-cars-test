@@ -7,11 +7,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor(){
-    this.isYoungDriver = true;
+  constructor()
+  {
   }
 
   title = 'Rentalcars.com';
 
-  isYoungDriver: boolean;
+  pickUpLocation: string;
+  pickUpDate: Date = new Date();
+  pickUpHour: string = "10";
+  pickUpMins: string = "00";
+
+  differentDropOffLocation: boolean = false;
+  dropOffLocation: string;
+  dropOffDate: Date = new Date();
+  dropOffHour: string = "10";
+  dropOffMins: string = "00";
+
+  purposeOfRental: string;
+  
+  isYoungDriver: boolean = true;
+  youngDriverAge: number;
 }

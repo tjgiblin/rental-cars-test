@@ -117,7 +117,7 @@ h1 {
     height: 500px;
   }
   
-  #ftsAutocomplete
+  input.ftsAutocomplete
   {	
       float: center;
       width: 100%;
@@ -197,15 +197,11 @@ h1 {
       margin-left: 2%;
   }
 
-  #car-hire-providers-message
+  h2.car-hire-providers-message
   {
       color: #0F6193;
   }
   
-  #why-book-bullets-points
-  {
-  }
-
   li
   {
     margin-top: 10px;
