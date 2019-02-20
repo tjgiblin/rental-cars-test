@@ -1,11 +1,15 @@
 <head>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="//code.angularjs.org/1.7.7/angular.min.js"></script>
+  <script src="//code.angularjs.org/1.7.7/angular-animate.js"></script>
 </head>
 
-<body>
+<body ng-app="">
 
-<div id="backgroundimage">
-    <img src="./assets/background-image.jpg" width="100%">
+<div>
+    <img id="backgroundimage" src="./assets/background-image.jpg">
 </div>
 
 <div style="width:100%; border-bottom-color: white; border-bottom-width:1px;">
@@ -50,7 +54,7 @@
   </div>
 </div>
 
-<div style="width: 90%; margin-left: 5%;">
+<div style="width: 60%; margin-left: 5%;">
 
   <fieldset id="location-fieldset">
 
@@ -163,8 +167,14 @@
 </fieldset>
 
 <fieldset>
-    <input type="checkbox">
+  <div ng-app>
+    <input type="checkbox" ng-model="young-driver">
     <label>Driver aged between 30-65?</label>
+
+    <div ng-show="young-driver">Driver's age
+      <input>
+    </div>
+  </div>
 </fieldset>
 
 <fieldset>
