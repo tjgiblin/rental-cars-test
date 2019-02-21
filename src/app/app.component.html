@@ -12,13 +12,6 @@
   <script> src="../node_modules/jquery/dist/jquery.js"</script>
   <script> src="../node_modules/bootstrap/dist/js/bootstrap.js"</script>
 
-  <script type="text/javascript">
-    $(document).ready(function ()
-    {
-      $('#btnPopover').popover();
-    })
-  </script>
-
   <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 
@@ -30,25 +23,28 @@
 
 <div style="width:100%; border-bottom-color: white; border-bottom-style:solid; border-bottom-width:1px;">
 
-  <div id="homePageTitle" style="width:40%; margin-right: 20%; display:inline-block;">
+  <div id="homePageTitle" style="width:40%; display: inline-block; margin:0%;">
     <h1> {{ title }} </h1>
   </div>
 
-  <div class="topnav">
+  <div class="topnav" style="float: right; margin-right:5%;">
 
     <div style="display:inline-block">
       <button class="nav-button">British Pound</button>
     </div>
 
     <div style="display:inline-block">
+        <span class="flag"></span>
         <button class="nav-button">English</button>
     </div>
 
     <div style="display:inline-block">
+        <span class="manageBooking"></span>
         <button class="nav-button">Manage Booking</button>
     </div>
 
     <div style="display:inline-block">
+        <span class="signIn"></span>
         <button class="nav-button">Sign In</button>
     </div>
   </div>
@@ -59,6 +55,7 @@
   <button id="popular-locations" style="float:right">POPULAR LOCATIONS</button>
 </div>
 
+<br>
 <div id="sub"> 
   <div class="content">
     <div id="title">
@@ -66,7 +63,7 @@
     </div>
     <div id="subTitle">
         <p>Compare 900 companies at over 60,000 locations. Best price guaranteed</p>
-      </div>
+    </div>
   </div>
 </div>
 

@@ -1,7 +1,10 @@
 h1 {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 200%;
+    font-size: 150%;
+    margin-left: 5%;
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
 
   body
@@ -26,6 +29,7 @@ h1 {
     color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
 }
 
 #subTitle
@@ -65,14 +69,17 @@ h1 {
 
   button.nav-button
   {
-    opacity: 0.5;
+    opacity: 0.7;
     color: white;
-    background-color: rgb(14,143,247);
-
-    border-right-color: white;
-    border-right-width: 1px;
+    background-color: rgb(123,158,231);
     cursor: pointer;
     display: inline-block;
+
+    border-style: none;
+    border-right-color: white;
+    border-right-style: solid;
+    border-right-width: 0.1px;
+    height: 37px;
   }
 
   button.nav-button:hover
@@ -232,4 +239,30 @@ h1 {
     height: 20px;
     width: 20px;
     border-style: none; 
+  }
+
+  span.flag
+  {
+      background-image: url(https://cdn2.rcstatic.com/images/site_graphics/newsite/sprite-flags-no-hk.png);
+      transform: scale3d(.8,.8,.8);
+      background-position-y: -24px;
+      height: 24px;
+      width: 23px;
+      display: inline-block;
+  }
+
+  span.manageBooking
+  {
+      background-image: url(https://cdn.rcstatic.com/images/site_graphics/newsite/mobile/menu/ico-edit--stated.svg);
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+  }
+
+  span.signIn
+  {
+      background-image: url(https://cdn.rcstatic.com/images/site_graphics/newsite/mobile/menu/ico-person-account--stated.svg);
+      display: inline-block;
+      height: 24px;
+      width: 24px;
   }
