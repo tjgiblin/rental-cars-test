@@ -1,11 +1,16 @@
 <head>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+  <link href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="//code.angularjs.org/1.7.7/angular.min.js"></script>
   <script src="//code.angularjs.org/1.7.7/angular-animate.js"></script>
 
   <script> src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"</script>
+
+  <script> src="../node_modules/jquery/dist/jquery.js"</script>
+  <script> src="../node_modules/bootstrap/dist/js/bootstrap.js"</script>
 
   <script type="text/javascript">
     $(document).ready(function ()
@@ -192,11 +197,9 @@
     <label>Driver aged between 30-65? </label>
     
         <button class="popover"
-        data-content="Some companies charge more for younger or older drivers. Before you choose a car, we’ll show you exactly who charges what."
+        ngbPopover="Some companies charge more for younger or older drivers. Before you choose a car, we’ll show you exactly who charges what."
         triggers="mouseenter:mouseleave"
-        title="No Hidden Fees"
-        data-toggle="popover"
-        id="btnPopover">
+        popoverTitle="No Hidden Fees">
           </button>
 
     <div *ngIf="!isYoungDriver">
@@ -212,10 +215,9 @@
     <span>Purpose of rental&nbsp;<em>(optional) </em></span>
 
       <button class="popover"
-      data-content="We are always looking for ways to improve our service and bring you the best deals by better understanding your needs."
+      ngbPopover="We are always looking for ways to improve our service and bring you the best deals by better understanding your needs."
       triggers="mouseenter:mouseleave"
-      data-toggle="popover"
-      id="btnPopover">
+      popoverTitle="popover">
         </button>
 
     <input type="radio" name="Business" value="Business" [(ngModel)]="purposeOfRental">Business
