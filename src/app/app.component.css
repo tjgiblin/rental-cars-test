@@ -241,6 +241,13 @@ h1 {
     border-style: none; 
   }
 
+  span.britishPound
+  {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 24px
+  }
+
   span.flag
   {
       background-image: url(https://cdn2.rcstatic.com/images/site_graphics/newsite/sprite-flags-no-hk.png);
